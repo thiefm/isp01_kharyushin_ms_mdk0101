@@ -18,7 +18,7 @@ namespace Kharyushin_ISP01
             Book book = new Book("C#", new string[] { "Троелсан", "Котов" }, 5000);
             Console.WriteLine(book.ToString());
 
-            Test test = new Test("Харитонов А.О.", "Иванова О.В.", "01.01.2020", 5);
+            Test test = new Test("Харитонов А.О.", "Иванова О.В.", new DateTime(2015, 7, 20, 18, 35, 10), 5);
             Console.WriteLine(test.ToString());
 
             Address address = new Address(443101, "Волжский", "Дружбы", "189", 13);
@@ -33,7 +33,7 @@ namespace Kharyushin_ISP01
             Banknote banknote = new Banknote(303, 5, "Пять рублей");
             Console.WriteLine(banknote.ToString());
 
-            Game game = new Game("CS:GO", "Valve", "2008", "Шутер");
+            Game game = new Game("CS:GO", "Valve", new DateTime(2015, 7, 20, 18, 35, 10), "Шутер");
             Console.WriteLine(game.ToString());
 
             Console.ReadKey();

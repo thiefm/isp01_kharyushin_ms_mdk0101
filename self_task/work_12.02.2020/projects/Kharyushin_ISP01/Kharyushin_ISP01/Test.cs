@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Kharyushin_ISP01
 {
@@ -10,10 +6,10 @@ namespace Kharyushin_ISP01
     {
         public string ExamineeFIO { get; set; }
         public string ExaminerFIO { get; set; }
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
         public int Evalution { get; set; }
 
-        public Test(string examineefio, string examinerfio, string date, int evalution)
+        public Test(string examineefio, string examinerfio, DateTime date, int evalution)
         {
             ExamineeFIO = examineefio;
             ExaminerFIO = examinerfio;

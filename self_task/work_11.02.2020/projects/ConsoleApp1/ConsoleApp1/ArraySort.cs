@@ -17,9 +17,7 @@ namespace ConsoleApp1
                 {
                     if (array[i] < array[i + 1])
                     {
-                        int tmp = array[i];
-                        array[i] = array[i + 1];
-                        array[i + 1] = tmp;
+                        Swap(array, i, i + 1);
                         isSwap = true;
                     }
                 }
@@ -27,6 +25,7 @@ namespace ConsoleApp1
                     break;
             }
         }
+
         public static void SelectionSort(ref int[] array)
         {
             if (array == null || array.Length < 2)
@@ -40,12 +39,15 @@ namespace ConsoleApp1
                         maxIndex = j;
 
                 if (maxIndex != i)
-                {
-                    int tmp = array[i];
-                    array[i] = array[maxIndex];
-                    array[maxIndex] = tmp;
-                }
+                    Swap(array, i, maxIndex);
             }
+        }
+
+        private static void Swap(int[] array, int index, int indexSwap)
+        {
+            int tmp = array[index];
+            array[index] = array[indexSwap];
+            array[indexSwap] = tmp;
         }
     }
 }
